@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ventana Principal</title>
+     <script type="text/javascript">
+          var ventana_secundaria
+          function abrirVentana(){
+              ventana_secundaria = window.open("", "nueva","width=200, height=200");
+              ventana_secundaria.document.write("<p>Esta es la ventana abierta con el boton</p>");
+              ventana_secundaria.document.write("<p>Esto es un paraffo</p>");
+              ventana_secundaria.document.write("<form><input type='button' value='Cerrar ventana secundaria' onclick='cerrarVentana()'></form>");
+          }
+
+         function cerrarVentana(){
+          ventana_secundaria.close();
+
+         }
+
+          </script>
+      </head>
+      
+      <body>
+          <h1>
+              Esta es la ventana principal
+          </h1>
+          <form>
+              <input type=button value="Abrir ventana secundaria" onclick="abrirVentana()">
+              <br>
+              <br>
+              <input type=button value="Cerrar ventana secundaria" onclick="cerrarVentana()">
+              
+          </form>
+      </body>
+      </html>

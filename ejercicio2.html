@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reloj con Javascript</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen"/>
+
+    <script language="JavaScript">
+      function mueveReloj(){
+        momentoActual = new Date()
+        hora = momentoActual.getHours()
+        minuto = momentoActual.getMinutes()
+        segundo = momentoActual.getSeconds()
+
+        horaImprimible = hora + " : " + minuto + " : " + segundo
+
+        document.form_reloj.reloj.value = horaImprimible
+
+        setTimeout("mueveReloj()",1000)
+      }
+    </script>
+  </head>
+
+  <body onload="mueveReloj()">
+
+      <h1>Reloj digital en Javascript</h1>
+
+      <form name="form_reloj">
+      <input type="text" name="reloj" size="10" onfocus="window.document.form_reloj.reloj.blur()" class="reloj">
+      </form>
+
+  </body>
+</html>

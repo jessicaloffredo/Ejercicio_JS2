@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ventana Principal</title>
+     <script type="text/javascript">
+
+        function confirmacion() {
+            var resultado = window.confirm('Quieres abrir una nueva ventana google?');
+            if (resultado == true) {
+               location.href="http://www.google.com";
+            } 
+            
+        }
+        </script>
+       
+      </head>
+      
+      <body>
+        <h1>En esto ejercicio miramos como cambiar pagina con location.href</h1>
+          <form>
+            <input type="button" onclick="confirmacion()" value="Pulsa aqui para cargar una nueva pagina">
+          </form>
+      </body>
+      </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+  <title>Ejercicio 1 - Calculo de la letra del NIF</title>
+  <script type="text/javascript">
+    var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+    var numero = prompt("Introduce tu numero de NIF (sin la letra)");
+
+    if(numero < 0 || numero > 99999999) {
+      alert("El numero proporcionado no es valido");
+    }
+    else {
+        var letraCalculada = letras[numero % 23];
+        alert("Su NIF es: "+letraCalculada+numero);
+      }
+</script>
+</head>
+
+<body>
+<p>Esta p&aacute;gina calcula la letra del NIF</p>
+</body>
+</html>
